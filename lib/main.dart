@@ -14,12 +14,9 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.red,
         fontFamily: 'Georgia',
         textTheme: const TextTheme(
-          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(
-            fontSize: 14.0,
-            fontFamily: 'Hind',
-          ),
+          headline1: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          headline6: TextStyle(fontSize: 30.0, fontStyle: FontStyle.italic),
+          bodyText2: TextStyle(fontSize: 18.0, fontFamily: 'Hind'),
         ),
       ),
       home: const HomePage(),
@@ -38,11 +35,9 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomButton(),
-            CustomButton(),
-            CustomButton(),
-            const SizedBox(height: 8),
             Container(
               color: Theme.of(context).accentColor,
               child: Text(
@@ -50,6 +45,10 @@ class HomePage extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),
+            const SizedBox(height: 8),
+            CustomButton(),
+            CustomButton(),
+            CustomButton(),
           ],
         ),
       ),
